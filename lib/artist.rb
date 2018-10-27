@@ -27,7 +27,7 @@ class Artist
   #   self.all.clear
   # end
   #
-  # def self.count # memorable class method 
+  # def self.count # memorable class method
   #   self.all.count
   # end
 
