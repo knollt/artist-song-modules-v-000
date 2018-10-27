@@ -14,9 +14,9 @@ class Song
     @@songs << self
   end
 
-  def self.find_by_name(name)
-    @@songs.detect{|a| a.name == name}
-  end
+  # def self.find_by_name(name)
+    # @@songs.detect{|a| a.name == name}
+  # end
 
   def self.all
     @@songs
@@ -26,7 +26,7 @@ class Song
   #   self.all.clear
   # end
   #
-  # def self.count # memorable class method 
+  # def self.count # memorable class method
   #   self.all.count
   # end
 
