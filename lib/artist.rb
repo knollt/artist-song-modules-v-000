@@ -11,8 +11,9 @@ class Artist
 
   @@artists = []
 
-  def initialize
-    @@artists << self
+  def initialize # memorable module instance method
+    # @@artists << self  # same as self.class.all << self
+    super
     @songs = []
   end
 
