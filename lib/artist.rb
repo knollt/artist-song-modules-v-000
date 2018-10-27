@@ -7,6 +7,7 @@ class Artist
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
   extend Findable
+  include Paramable
 
   @@artists = []
 
@@ -23,11 +24,11 @@ class Artist
     @@artists
   end
 
-  # def self.reset_all # memorable class method
+  # def self.reset_all # memorable module method
   #   self.all.clear
   # end
   #
-  # def self.count # memorable class method
+  # def self.count # memorable module method
   #   self.all.count
   # end
 
@@ -40,7 +41,7 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param # paramable module method
+  #   name.downcase.gsub(' ', '-')
+  # end
 end
