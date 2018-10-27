@@ -6,7 +6,7 @@ class Song
   attr_accessor :name
   attr_reader :artist
   extend Memorable::ClassMethods
-  # include Memorable::InstanceMethods
+  include Memorable::InstanceMethods
   extend Findable
 
   @@songs = []
@@ -15,7 +15,7 @@ class Song
     @@songs << self
   end
 
-  # def self.find_by_name(name)
+  # def self.find_by_name(name) #findable module method
     # @@songs.detect{|a| a.name == name}
   # end
 
@@ -23,11 +23,11 @@ class Song
     @@songs
   end
 
-  # def self.reset_all  # memorable class method
+  # def self.reset_all  # memorable module method
   #   self.all.clear
   # end
   #
-  # def self.count # memorable class method
+  # def self.count # memorable module method
   #   self.all.count
   # end
 
